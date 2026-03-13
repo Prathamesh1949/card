@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Ekta!</title>
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+    <!-- Audio Element for Background Music -->
+    <audio id="bg-music" loop>
+        <source src="happy_birthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Stage 1: The Dark Scene -->
+    <div id="intro-screen" class="active">
+        <h2 class="mystic-text pulse-text">Tap the Lightstick to begin...</h2>
+        <div id="lightstick-container" class="glowing-item">
+            <img src="lightstick.png" alt="BTS Lightstick" class="floating">
+        </div>
+    </div>
+
+    <!-- Stage 2: The Magical Reveal -->
+    <div id="main-content" class="hidden">
+
+        <!-- Animated Background & Particles & Balloons -->
+        <div id="dynamic-bg"></div>
+        <div id="particles-container"></div>
+        <div id="balloons-container"></div>
+
+        <!-- The Vertical Stack System -->
+        <div class="stack-container">
+
+            <!-- Slide 1 -->
+            <div class="slide" id="marigold-slide" style="position: relative;">
+                <!-- Growing Sunflowers -->
+                <div class="side-flower left">🌻</div>
+                <div class="side-flower right">🌻</div>
+
+                <div class="slide-content">
+                    <header class="glass-panel main-title">
+                        <h1 class="sparkle-text animate-on-scroll delay-1">Happy Birthday, Ekta! 🎂</h1>
+                        <p class="subtitle animate-on-scroll delay-2">Let the birthday magic begin... ✨</p>
+                        <div class="marigold-message animate-on-scroll delay-3">
+                            <p>To the <span class="highlight-marigold">Marigold</span> of my life 🌼</p>
+                            <p>Thank you for bringing so much brightness, warmth, and beautiful energy to every
+                                single day!</p>
+                        </div>
+                    </header>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <div class="slide-content">
+                    <section class="story-section anime-theme onepiece-theme glass-panel">
+                        <div class="theme-icon animate-on-scroll delay-1">
+                            <span style="font-size: 4rem;">🏴‍☠️</span>
+                        </div>
+                        <h2 class="animate-on-scroll delay-2">A Legendary Adventure Begins!</h2>
+                        <div class="content-box animate-on-scroll delay-3">
+                            <p>Just like Luffy, Ace, and Sabo's unbreakable bond, the memories we share are the greatest
+                                treasure of all. Happy Birthday to someone who brings as much joy to the world as the
+                                Straw Hat crew!</p>
+                            <p class="quote">"No matter what happens, we'll always be bound together!"
+                            </p>
+                            <p>Here's to another year of chasing dreams and making every moment legendary. Set sail for
+                                your best year yet, Captain Ekta! 👑</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <div class="slide-content">
+                    <section class="story-section bts-theme glass-panel">
+                        <div class="theme-icon animate-on-scroll delay-1">💜</div>
+                        <h2 class="animate-on-scroll delay-2">A Star in the Making</h2>
+                        <div class="content-box animate-on-scroll delay-3">
+                            <p>Just like a BTS concert, you light up every room you walk into! Hoping this year
+                                brings you as much joy as hearing your favorite track live.</p>
+                            <p class="korean-text highlight">보라해! (Borahae!) �</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide">
+                <div class="slide-content">
+                    <section class="story-section anime-theme itachi-theme glass-panel">
+                        <div class="theme-icon animate-on-scroll delay-1">
+                            <img src="itachi.png" alt="Sharingan" class="small-icon spin-slow">
+                        </div>
+                        <h2 class="animate-on-scroll delay-2">The Power of the Sharingan</h2>
+                        <div class="content-box animate-on-scroll delay-3">
+                            <p>May you face every challenge with the calm, unmatched brilliance of Itachi Uchiha.
+                            </p>
+                            <p class="quote">"People's lives don't end when they die, it ends when they lose faith."
+                            </p>
+                            <p>Keep your vision clear and your spirit strong! 🦅</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide">
+                <div class="slide-content">
+                    <section class="story-section anime-theme levi-theme glass-panel">
+                        <div class="theme-icon animate-on-scroll delay-1">
+                            <img src="levi.png" alt="Wings of Freedom" class="small-icon float-hover">
+                        </div>
+                        <h2 class="animate-on-scroll delay-2">Dedicate Your Heart!</h2>
+                        <div class="content-box animate-on-scroll delay-3">
+                            <p>With the fierce determination of Captain Levi, there is absolutely nothing you cannot
+                                conquer this year.</p>
+                            <p class="quote">"The only thing we're allowed to do... is believe that we won't regret
+                                the choice we made."</p>
+                            <p>Spread your Wings of Freedom, Ekta! ⚔️</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- Slide 6: Video Montage -->
+            <div class="slide">
+                <div class="slide-content">
+                    <section class="story-section video-theme glass-panel">
+                        <div class="theme-icon animate-on-scroll delay-1">
+                            <span style="font-size: 4rem;">🎬</span>
+                        </div>
+                        <h2 class="animate-on-scroll delay-2">Memories & Magic</h2>
+                        <div class="content-box animate-on-scroll delay-3">
+                            <p>Because every great adventure needs an amazing soundtrack!</p>
+
+                            <div class="video-container">
+                                <!-- The user will need to place their video file here named 'ekta_video.mp4' -->
+                                <video controls preload="metadata">
+                                    <source src="ekta_video.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+                            <p class="quote">"Here's to the funny moments, the crazy times, and everything in between!"
+                            </p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Slide 7 -->
+            <div class="slide">
+                <div class="slide-content">
+                    <footer class="glass-panel final-message">
+                        <h2 class="animate-on-scroll delay-1">Wishing you the most epic year yet! 🎉</h2>
+                        <button id="replay-btn" class="glow-on-hover animate-on-scroll delay-2">Experience the Magic
+                            Again 🎇</button>
+                    </footer>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
